@@ -10,7 +10,7 @@ RSpec.describe 'Challenge: ' do
       expect(make_change(3.00, 5.00)).to eq([8, 0, 0, 0])
       expect(make_change(4.31, 5.00)).to eq([2, 1, 1, 4])
     end
-    xcontext 'when given a "denominations" array as an optional argument' do
+    context 'when given a "denominations" array as an optional argument' do
       it 'returns an equal-sized array to the "denominations" array' do
         expect(make_change(3.31, 5.00, [1]).length).to eq(1)
         expect(make_change(3.31, 5.00, [100, 50, 25, 1]).length).to eq(4)
